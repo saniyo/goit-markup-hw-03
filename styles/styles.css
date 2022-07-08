@@ -10,12 +10,14 @@
     --secondary-bg-color: #2F303A;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    border: 0;
+*, *::before, *::after {
+    box-sizing: inherit;
 }
 
+h1,h2,h3,h4,h5,h6,p,ul,li {
+    margin: 0;
+    padding: 0;
+}
 
 .page {
     background-color: #ffffff;
@@ -25,7 +27,6 @@
 
 .list {
     list-style: none;
-    padding: 0;
 }
 
 .logo {
@@ -54,8 +55,9 @@ a:link {
     text-decoration: none;
 }
 
-.site-nav .link {
-    color: var(--primary-text-color);
+
+.list .item + .item {
+ margin-left: 50px;
 }
 
 .nav.list:hover,
@@ -67,6 +69,10 @@ a:link {
     color: var(--secondary-text-color);
 }
 
+.nav-list li+li {
+    margin-left: 50px;
+}
+
 .nav.list {
     color: var(--primary-text-color);
     font-weight: 500;
@@ -76,6 +82,7 @@ a:link {
 }
 
 .nav.link {
+    display: flex;
     color: var(--secondary-text-color);
     font-weight: 500;
     font-size: 14px;
@@ -83,18 +90,63 @@ a:link {
     letter-spacing: 0.02em;
 }
 
+
 .nav.link:hover,
 .nav.link:focus {
     color: var(--accent-color);
 }
 
+/* HEADER */
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.site-nav{
+    display: flex;
+    align-items: center;
+}
+
+
+.nav-list {
+    display: flex;
+    margin-left: 93px;
+}
+
+.nav-contacts-list {
+    display: flex;
+    margin-left: auto;
+}
+
+.nav-contacts-list li+li {
+    margin-left: 50px;
+}
+
+.header {
+ height: 80px;
+ display: flex;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1170px;
+
+    outline: 2px solid orange;
+}
 
 /* MAIN PAGE */
 .hero {
     background-color: var(--secondary-bg-color);
+    padding-top: 200px;
+    padding-bottom: 200px;
+    text-align: center;
 }
 
 .hero-title {
+    margin-top: 0;
+    margin-bottom: 30px;
     color: var(--white-text-color);
     font-weight: 900;
     font-size: 44px;
@@ -104,14 +156,29 @@ a:link {
 }
 
 .button {
+    display: inline-block;
+    border-radius: 4px;
+    padding: 10px, 32px;
+    border: none;
+    min-width: 200px;
+    min-height: 50px;
+
     font-family: inherit;
-    color: var(--white-text-color);
-    background-color: var(--accent-color);
-    text-align: center;
+
     font-size: 16px;
     line-height: 1.88;
     letter-spacing: 0.06em;
     cursor: pointer;
+}
+
+.btn-primary {
+    color: var(--white-text-color);
+    background-color: var(--accent-color);
+}
+
+.btn-secondary {
+    color: var(212121);
+    background-color: var(F5F4FA);
 }
 
 .section {
@@ -119,6 +186,9 @@ a:link {
 }
 
 .section-title {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 50px;
     color: var(--primary-text-color);
     font-weight: 700;
     font-size: 36px;
@@ -128,6 +198,7 @@ a:link {
 
 /* features */
 .feature-title {
+    margin-bottom: 10px;
     color: var(--primary-text-color);
 
     font-weight: 700;
@@ -138,6 +209,7 @@ a:link {
 }
 
 .feature-description {
+    margin-bottom: 95px;
     color: var(--secondary-text-color);
 
     font-size: 14px;
@@ -145,31 +217,52 @@ a:link {
     letter-spacing: 0.03em;
 }
 
-/* what we do*/
+/*main projects*/
 
-/* who we are */
-.whoweare-title{
+.projects-photo {
+    margin-bottom: 50px;
+}
+
+/*team*/
+.team {
+    padding-top: 95px;
+    padding-bottom: 95px;
+    background-color: #F5F4FA;
+}
+
+.team-li {
+    text-align: center;
+}
+
+.team-photo {
+    margin-bottom: 30px;
+}
+
+.team-title {
     color: var(--primary-text-color);
 
     font-weight: 700;
     font-size: 16px;
     line-height: 1.2;
     letter-spacing: 0.03em;
+    margin-bottom: 10px;
+
 }
 
-.whoweare-description{
+.team-description{
     color: var(--secondary-text-color);
 
     /* font-weight: 400;
     font-size: 16px; */
     line-height: 1.2;
     letter-spacing: 0.03em;
+    margin-bottom: 30px;
 }
 
 
 /* PORTFOLIO PAGE */
 .projects-filter {
-
+    margin-bottom: 50px;
 }
 
 .portfolio-our-projects a{
@@ -196,6 +289,8 @@ a:link {
 /* FOOTER */
 .footer {
     background-color: var(--secondary-bg-color);
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 /* ADDRESS */
@@ -207,15 +302,26 @@ address {
     font-size: 14px;
     line-height: 24px;
 
+    margin-top: 20px;
+
 }
 
-.address.physical {
+.physical {
     color: #000000;
     color: var(--white-text-color);
+    margin-bottom: 9px;
 }
 
-.address.virtual{
+.mail {
     color: #000000;
     color: var(--tranp-white-text-color);
+    margin-bottom: 9px;
+    display: inline-block;
+}
+
+.phone{
+    color: #000000;
+    color: var(--tranp-white-text-color);
+    display: inline-block;
 }
 
