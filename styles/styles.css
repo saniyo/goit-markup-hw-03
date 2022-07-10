@@ -23,7 +23,7 @@ h1,h2,h3,h4,h5,h6,p,ul,li {
     background-color: #ffffff;
     color: var(--primary-text-color);
     font-family: 'Roboto', sans-serif;
-    
+
     width: 1600px;
     margin-left: auto;
     margin-right: auto;
@@ -132,14 +132,18 @@ a:link {
 }
 
 .header {
- height: 80px;
- display: flex;
+height: 80px;
+display: flex;
+border-bottom: 1px;
+border-color: #757575;
 }
 
 .container {
     margin-left: auto;
     margin-right: auto;
     width: 1170px;
+    padding-left: 15px;
+    padding-right: 15px;
 
     /* outline: 2px solid orange; */
 }
@@ -347,6 +351,11 @@ a:link {
 .portfolio-our-projects {
     display: flex;
     flex-wrap: wrap;
+}
+
+.projects-item a{
+    border-bottom: 10px;
+    border-color: #757575;
 }
 
 .projects-item:not(:nth-child(3n)) {
