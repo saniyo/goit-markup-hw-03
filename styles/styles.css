@@ -134,8 +134,7 @@ a:link {
 .header {
 height: 80px;
 display: flex;
-border-bottom: 1px;
-border-color: #757575;
+border-bottom: 1px solid #757575;
 }
 
 .container {
@@ -144,8 +143,6 @@ border-color: #757575;
     width: 1170px;
     padding-left: 15px;
     padding-right: 15px;
-
-    /* outline: 2px solid orange; */
 }
 
 /* MAIN PAGE */
@@ -354,8 +351,7 @@ border-color: #757575;
 }
 
 .projects-item a{
-    border-bottom: 10px;
-    border-color: #757575;
+    border-bottom: 1px solid #757575;
 }
 
 .projects-item:not(:nth-child(3n)) {
