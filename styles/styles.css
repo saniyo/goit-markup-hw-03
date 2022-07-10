@@ -134,7 +134,7 @@ a:link {
 .header {
 height: 80px;
 display: flex;
-border-bottom: 1px solid #757575;
+border-bottom: 1px solid #EEEEEE;
 }
 
 .container {
@@ -351,7 +351,7 @@ border-bottom: 1px solid #757575;
 }
 
 .projects-item a{
-    border-bottom: 1px solid #757575;
+    border-bottom: 1px solid #EEEEEE;
 }
 
 .projects-item:not(:nth-child(3n)) {
