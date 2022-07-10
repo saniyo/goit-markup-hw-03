@@ -350,7 +350,7 @@ border-bottom: 1px solid #EEEEEE;
     flex-wrap: wrap;
 }
 
-.projects-item a{
+.projects-item {
     border-bottom: 1px solid #EEEEEE;
 }
 
