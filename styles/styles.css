@@ -92,9 +92,12 @@ a:link {
     letter-spacing: 0.02em;
 }
 
-
 .nav.link:hover,
 .nav.link:focus {
+    color: var(--accent-color);
+}
+
+.nav.list.highlight {
     color: var(--accent-color);
 }
 
@@ -128,8 +131,8 @@ a:link {
 .header {
 display: flex;
 border-bottom: 1px solid #EEEEEE;
-    padding-top: 24px;
-        padding-bottom: 24px;
+padding-top: 24px;
+padding-bottom: 24px;
 }
 
 .container {
@@ -162,14 +165,9 @@ border-bottom: 1px solid #EEEEEE;
 .button {
     display: inline-block;
     border-radius: 4px;
-    padding-left: 22px;
-    padding-right: 22px;
+    padding: 6px 22px;
     border: none;
-    min-width: 73px;
-    min-height: 50px;
-
     font-family: inherit;
-
     font-size: 16px;
     line-height: 1.88;
     letter-spacing: 0.06em;
@@ -184,6 +182,7 @@ border-bottom: 1px solid #EEEEEE;
 .btn-secondary {
     color: #212121;
     background-color: #F5F4FA;
+    border: 2px solid #F5F4FA;
 }
 
 .section {
@@ -239,7 +238,7 @@ border-bottom: 1px solid #EEEEEE;
 
 /*main we do*/
 .wedo {
-    display: flex;
+    /* display: flex; */
     padding-bottom: 94px;
 }
 
@@ -278,9 +277,8 @@ border-bottom: 1px solid #EEEEEE;
 }
 
 .team-div{
-    margin-top: 30px;
-    margin-bottom: 30px;
-    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .team-title {
@@ -290,6 +288,7 @@ border-bottom: 1px solid #EEEEEE;
     font-size: 16px;
     line-height: 1.2;
     letter-spacing: 0.03em;
+    margin-bottom: 10px;
 }
 
 .team-description{
@@ -313,6 +312,7 @@ border-bottom: 1px solid #EEEEEE;
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
+    margin-bottom: 4px;
 }
 
 .projects-filter {
@@ -338,6 +338,9 @@ border-bottom: 1px solid #EEEEEE;
 
 .projects-div{
     padding:20px 24px;
+    border-bottom: 1px solid #EEEEEE;
+    border-right: 1px solid #EEEEEE;
+    border-left: 1px solid #EEEEEE;
 }
 
 .projects-description {
@@ -353,7 +356,7 @@ border-bottom: 1px solid #EEEEEE;
 }
 
 .projects-item {
-    border-bottom: 1px solid #EEEEEE;
+   
 }
 
 .projects-item:not(:nth-child(3n)) {
@@ -379,14 +382,14 @@ address {
     font-style: inherit;
     font-weight: 400;
     font-size: 14px;
-    line-height: 2.5;
+    line-height: 1.71;
 
     margin-top: 20px;
 
 }
 
-.address-li > a {
-    margin-bottom: 9px;
+.address-li + .address-li {
+    margin-top: 9px;
 }
 
 .physical {
